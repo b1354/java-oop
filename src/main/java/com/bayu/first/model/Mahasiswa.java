@@ -28,6 +28,4 @@ public class Mahasiswa {
     public String getPhoto() {
         return photo;
     }
-
-     
 }
