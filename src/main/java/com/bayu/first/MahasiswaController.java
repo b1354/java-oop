@@ -29,7 +29,6 @@ public class MahasiswaController {
     @PostMapping("/insert")
     public String inserMahasiswa(@RequestBody Mahasiswa data) {
         String hasil;
-        System.out.println(data.getNim());
         String sql = "INSERT INTO mhs VALUES(?, ?, ?, ?)";
         try {
             koneksi.update(sql, data.getNim(), data.getNama(), data.getAlamat(), data.getPhoto());
