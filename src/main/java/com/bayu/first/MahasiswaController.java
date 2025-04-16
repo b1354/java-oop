@@ -30,7 +30,7 @@ public class MahasiswaController {
         return koneksi.query(sql, new RowMapperMhs());
     }
 
-    @GetMapping("ambilData/{id}")
+    @GetMapping("/ambilData/{id}")
     public List<Mahasiswa> getMHsByNim(@PathVariable String id) {
         String sql = "SELECT * FROM mhs WHERE c_nim = ?";
         List<Mahasiswa> data = koneksi.query(sql, new RowMapperMhs(), id);
